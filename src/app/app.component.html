@@ -1,23 +1,20 @@
 <h2 style="text-align: center;">CALL</h2>
-<div class="container col-lg-12">
-  <table>
-    <thead>
-      <tr>
-        <th>postId</th>
-        <th>id</th>
-        <th>name</th>
-        <th>email</th>
-        <th>body</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let com of lstcomments">
-        <td>{{com.postId}}</td>
-        <td>{{com.id}}</td>
-        <td>{{com.name}}</td>
-        <td>{{com.email}}</td>
-        <td>{{com.body}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+    <ag-grid-angular  
+    style="width: 900px; height: 250px;"
+    class="ag-theme-alpine"
+    [rowData]="rowD"
+    [columnDefs]="columnDef"
+     ></ag-grid-angular>
+
+    
+
+  
+
+  
+  
+
+
+
+  
+  

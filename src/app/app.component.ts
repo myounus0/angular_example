@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { comments } from './class/comments';
 import { freeApiService } from './service/freeApiService';
-
+import { ColDef } from 'ag-grid-community';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,20 @@ import { freeApiService } from './service/freeApiService';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
+  columnDef:ColDef[] = [
+    { field: 'postId'},
+    { field: 'id'},
+    { field: 'name'},
+    { field: 'email'},
+    { field: 'body'}
+  ]
+  lstcomments!:comments[];
+
+  rowD = []
+
   constructor(private freeApiService:freeApiService) {
   }
-
-  lstcomments!:comments[];
 
   ngOnInit() {
 
@@ -21,7 +30,7 @@ export class AppComponent {
     .subscribe
     (
       data=>{
-        this.lstcomments = data;
+        this.rowD = data;
       }
     );
   }

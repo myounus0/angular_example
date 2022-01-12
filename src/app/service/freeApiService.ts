@@ -5,8 +5,8 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class freeApiService
 {
-    constructor(private httpclient:HttpClient){}
+    constructor(private http:HttpClient){}
     getComments():Observable<any>{
-        return this.httpclient.get("http://jsonplaceholder.typicode.com/posts/1/comments")
+        return this.http.get("http://jsonplaceholder.typicode.com/posts/1/comments")
     }
 }
