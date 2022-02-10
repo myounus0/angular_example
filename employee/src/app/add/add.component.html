@@ -1,0 +1,13 @@
+<h1 *ngIf="employee=='create'" style="text-align: center;">Add Employee</h1>
+<h1 *ngIf="employee!='create'" style="text-align: center;">Edit Employee</h1>
+
+<form [formGroup]="createForm">
+    <input type="text" formControlName="id" placeholder="id"><br>
+    <input type="text" formControlName="name" placeholder="name"><br>
+    <input type="text" formControlName="designation" placeholder="designation"><br>
+    <input type="text" formControlName="state" placeholder="state"><br>
+    <input type="text" formControlName="phoneNumber" placeholder="phoneNumber"><br>
+</form>
+<button mat-stroked-button (click)="onCancel()">Cancel</button>
+<button *ngIf="employee=='create'" mat-raised-button color="primary" (click)="createUpdate()">Create</button>
+<button *ngIf="employee!='create'" mat-raised-button color="primary" (click)="createUpdate()">Update</button>

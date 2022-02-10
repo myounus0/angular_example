@@ -1,0 +1,14 @@
+.page {
+   margin-left: 1275px;
+}
+mat-toolbar {
+    color: rgb(240, 230, 230);
+    font-style: italic;
+    padding: 20px;
+    margin: 0%;
+    position: absolute;
+    font-size:larger;
+    width: 1535px;
+    bottom: 0%;
+}
+
