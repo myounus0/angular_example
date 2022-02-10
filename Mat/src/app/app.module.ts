@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from'@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { freeApiService } from './service/freeApiService';
-import { AgGridModule } from 'ag-grid-angular';
+import { MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -13,12 +11,9 @@ import { AgGridModule } from 'ag-grid-angular';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    AgGridModule
-    ],
-  providers: [freeApiService],
+    AppRoutingModule,MatTableModule
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

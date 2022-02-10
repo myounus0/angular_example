@@ -1,5 +1,5 @@
 {
-  "name": "employee",
+  "name": "mat",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -20,10 +20,6 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
-    "@material/button": "^13.0.0",
-    "@material/form-field": "^13.0.0",
-    "angular-material-pagination": "^1.0.2",
-    "mat-icon-import": "^0.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
