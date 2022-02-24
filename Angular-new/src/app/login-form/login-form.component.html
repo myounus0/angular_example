@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form">
+                <h1 class="log">Login</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <div class="name">
+                        <input type="text" formControlName="username" placeholder="User Name"><br>
+                        <span *ngIf="loginForm.controls.username.invalid && loginForm.controls.username.touched"> User
+                            Name is required ..! </span>
+                    </div>
+                    <div class="password">
+                        <input type="password" formControlName="password" placeholder="Password"><br>
+                        <span *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">
+                            Password is required ..! </span>
+                    </div>
+                    <div class="login">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <div>
+                    <h3>Note<br>username : admin<br> password : admin</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
