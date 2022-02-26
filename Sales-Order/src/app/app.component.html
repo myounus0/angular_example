@@ -1,0 +1,18 @@
+<div style="width:700px; margin:0 auto;">
+  <h2>Sales Order</h2>
+  <button class="btn btn-outline-primary" (click)="addAriel()">ARI</button>
+  <button class="btn btn-outline-primary" (click)="addPampers()">PAM</button>
+  <button class="btn btn-outline-primary" (click)="addBiscuit()">BST</button>
+  <button class="btn btn-outline-primary" (click)="addShampoo()">SMP</button>
+  <button class="btn btn-outline-primary" (click)="addSerf()">SRF</button><br><br>
+  <button class="btn btn-outline-primary mb-3" (click)="onRemoveSelected()">Remove Item</button>
+  <a href="" (click)="resetValues()">Clear All</a><br>
+  <input type="text" id="filter-text-box" placeholder="Search By Order Qty" (keyup)="onFilterTextBoxChanged()"
+    [(ngModel)]="searchValue" class="mb-3">
+  
+  <ag-grid-angular style="width: 603px; height: 500px;" class="ag-theme-alpine" [rowData]="rowData"
+    [columnDefs]="columnDefs" [getRowNodeId]="getRowNodeId" (gridReady)="onGridReady($event)"
+    [frameworkComponents]="frameworkComponents" [immutableData]="true" (cellValueChanged)="onCellValueChanged($event)"
+    [rowSelection]="rowSelection">
+  </ag-grid-angular>
+</div>

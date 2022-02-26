@@ -1,0 +1,14 @@
+button{
+     border-radius: 60px;
+     margin-right: 1rem;
+
+}
+
+  ::ng-deep .ag-header-container{
+    background-color: aqua;
+  }
+
+  ::ng-deep .ag-floating-bottom-full-width-container{
+    background-color: rgb(207, 11, 11);
+    opacity: 0.5;
+  }
